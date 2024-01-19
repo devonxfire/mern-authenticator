@@ -1,41 +1,42 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  signInStart,
+  signInSuccess,
+  signInFailure,
+} from "../redux/user/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
-export default function Signin() {
+export default function SignIn() {
   const [formData, setFormData] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [errorDetails, setErrorDetails] = useState("");
-  const navigate = useNavigate();
+  const { loading, error } = useSelector((state) => state.user);
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      setLoading(true);
-      setError(false);
+      dispatch(signInStart());
       const res = await fetch("/api/auth/sign-in", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-
       if (data.success === false) {
-        setErrorDetails(data.message);
-        setError(true);
-        setLoading(false);
+        dispatch(signInFailure(data));
         return;
       }
-      setLoading(false);
+      dispatch(signInSuccess(data));
       navigate("/");
     } catch (error) {
-      setLoading(false);
-      setError(true);
-      console.log(error);
+      dispatch(signInFailure(error));
     }
   };
 
@@ -70,7 +71,9 @@ export default function Signin() {
           <span className="text-blue-500">Sign Up</span>
         </Link>
       </div>
-      {error && <p className="text-red-700 mt-5">`Error! ${errorDetails}`</p>}
+      <p className="text-red-700 mt-5">
+        {error ? error.message || "Something went wrong!" : ""}
+      </p>
     </div>
   );
 }
