@@ -39,7 +39,6 @@ export const signIn = async (req, res, next) => {
     }
 
     // JWT
-    // const expiry = new Date(Date.now() + 3600000); // 1 hour session
     const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET);
 
     const { password: hashedPassword, ...rest } = validUser._doc;
@@ -48,8 +47,6 @@ export const signIn = async (req, res, next) => {
       .cookie("access_token", token, { httpOnly: true })
       .status(200)
       .json({ token, rest });
-
-    res.status(200);
   } catch (error) {
     next(error);
   }
