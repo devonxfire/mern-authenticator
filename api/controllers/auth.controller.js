@@ -56,7 +56,7 @@ export const signIn = async (req, res, next) => {
     res
       .cookie("access_token", token, { httpOnly: true })
       .status(200)
-      .json({ token, rest });
+      .json(rest);
   } catch (error) {
     next(error);
   }
@@ -72,7 +72,7 @@ export const googleSignIn = async (req, res, next) => {
       res
         .cookie("access_token", token, { httpOnly: true })
         .status(200)
-        .json({ token, rest });
+        .json(rest);
     } else {
       const generatedPassword =
         Math.random().toString(36).slice(-8) +
@@ -84,7 +84,6 @@ export const googleSignIn = async (req, res, next) => {
           req.body.name.split(" ").join("").toLowerCase() +
           Math.random().toString(36).slice(-8),
         email: req.body.email,
-
         password: hashedPassword,
         profilePicture: req.body.photo,
       });
@@ -95,7 +94,7 @@ export const googleSignIn = async (req, res, next) => {
       res
         .cookie("access_token", token, { httpOnly: true })
         .status(200)
-        .json({ token, rest });
+        .json(rest);
     }
   } catch (error) {
     next(error);
