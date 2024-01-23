@@ -70,7 +70,7 @@ export default function Profile() {
               Error uploading image (File size must be less than 2MB)
             </span>
           ) : imagePercent > 0 && imagePercent < 100 ? (
-            <span className="text-slate-700">{`Uploading: ${imagePercent}%`}</span>
+            <span className="text-blue-700">{`Uploading: ${imagePercent}%`}</span>
           ) : imagePercent === 100 ? (
             <span className="text-green-700">Image uploaded successfully</span>
           ) : (

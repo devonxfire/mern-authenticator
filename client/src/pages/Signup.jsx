@@ -24,7 +24,6 @@ export default function Signup() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      console.log(data);
 
       if (data.success === false) {
         setErrorDetails(data.message);
@@ -37,7 +36,6 @@ export default function Signup() {
     } catch (error) {
       setLoading(false);
       setError(true);
-      console.log(error);
     }
   };
 
@@ -80,7 +78,7 @@ export default function Signup() {
           <span className="text-blue-500">Sign In</span>
         </Link>
       </div>
-      {error && <p className="text-red-700 mt-5">`Error! ${errorDetails}`</p>}
+      {error && <p className="text-red-700 mt-5">Error! {errorDetails}</p>}
     </div>
   );
 }
