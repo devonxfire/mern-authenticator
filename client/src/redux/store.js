@@ -20,8 +20,4 @@ export const store = configureStore({
     }),
 });
 
-console.log("Initial State:", store.getState());
-
 export const persistor = persistStore(store);
-
-console.log("Persisted State:", store.getState());
