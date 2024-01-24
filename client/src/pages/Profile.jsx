@@ -126,6 +126,9 @@ export default function Profile() {
           className="h-24 w-24 self-center cursor-pointer rounded-full object-cover mt-2"
           onClick={() => fileRef.current.click()}
         />
+        <p className="text-xs text-gray-400 self-center">
+          Click the image to change profile picture
+        </p>
         <p className="text-sm self-center">
           {imageError ? (
             <span className="text-red-700">

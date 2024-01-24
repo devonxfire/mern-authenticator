@@ -4,17 +4,15 @@ import { FaGithub } from "react-icons/fa";
 
 export default function About() {
   return (
-    <div className="px-6 sm:px-2 py-12 max-w-2xl mx-auto ">
-      <h1 className="text-3xl font-bold my-8 text-slate-700 text-center sm:text-start">
-        About Me...
-      </h1>
+    <div className="px-6 sm:px-2 py-6 max-w-2xl mx-auto mt-6">
+      <h1 className="text-3xl font-bold my-8 text-slate-700 ">About Me</h1>
       <img
         src="https://avatars.githubusercontent.com/u/33515210?v=4"
         alt="about-me-pic"
-        className="sm:w-[150px] w-[100px] rounded-full mx-auto mb-6 border-slate-200 border-2 shadow-xl"
+        className="sm:w-[140px] w-[90px] rounded-full  mb-6 border-slate-200 border-2 shadow-xl mx-auto"
       />
 
-      <div className="bg-slate-500 text-gray-200 font-light rounded-lg p-4 shadow-lg">
+      <div className="bg-slate-100 text-gray-600 font-extralight rounded-lg p-4 shadow-xl">
         <p className="mb-4  text-sm leading-relaxed">
           Hi there! My name is Devon Martindale, and I am a full stack developer
           specialising in the MERN stack. I love the challenge of building
@@ -36,7 +34,7 @@ export default function About() {
         </p>
       </div>
 
-      <p className="mb-4 text-slate-500 text-sm  font-light leading-relaxed mt-6">
+      <p className="mb-4 text-slate-500 text-sm  font-light leading-relaxed mt-10">
         Please feel free to reach out to me for any of your development needs
         at:{" "}
         <a href="mailto:devonmartindale@gmail.com?subject=Interested in Development">
@@ -50,7 +48,7 @@ export default function About() {
         <Link
           to="https://github.com/devonxfire"
           target="_blank"
-          className="flex items-center gap-2 hover:opacity-90 bg-slate-700 p-2 rounded-lg w-[50%] text-white mx-auto sm:mx-0"
+          className="flex items-center gap-2 hover:opacity-90 bg-slate-600 p-2 rounded-lg w-[50%] text-white mx-auto sm:mx-0"
         >
           <FaGithub className="w-8 h-8 " />
           <p>My GitHub Portfolio</p>
