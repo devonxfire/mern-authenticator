@@ -8,26 +8,35 @@ export default function About() {
       <h1 className="text-3xl font-bold my-8 text-slate-700 text-center sm:text-start">
         About Me...
       </h1>
-      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
-        Hi there! My name is Devon Martindale, and I am a full stack developer
-        specialising in the MERN stack. I love the challenge of building
-        applications to satisfy both the client facing UI and functionality, as
-        well as the behind the scenes backend integration.
-      </p>
-      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
-        After the covid pandemic I decided to make make some changes to my life,
-        and started coding. I had always had a keen interest in development and
-        so I enrolled in a software engineering course setup by Hyperion
-        Development. I decided to branch more into the frontend side and learnt
-        frameworks and libraries such as React and Tailwind CSS, bringing life
-        into my APIs and NodeJS applications.
-      </p>
-      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
-        I am a creative person who enjoys creating music with my band. I live in
-        sunny Cape Town South Africa with my wife and 4 furry friends, and I am
-        partial to a round of golf!
-      </p>
-      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
+      <img
+        src="https://avatars.githubusercontent.com/u/33515210?v=4"
+        alt="about-me-pic"
+        className="sm:w-[150px] w-[100px] rounded-full mx-auto mb-6 border-slate-200 border-2 shadow-xl"
+      />
+
+      <div className="bg-slate-500 text-gray-200 font-light rounded-lg p-4 shadow-lg">
+        <p className="mb-4  text-sm leading-relaxed">
+          Hi there! My name is Devon Martindale, and I am a full stack developer
+          specialising in the MERN stack. I love the challenge of building
+          applications to satisfy both the client facing UI and functionality,
+          as well as the behind the scenes backend integration.
+        </p>
+        <p className="mb-4  text-sm leading-relaxed">
+          After the covid pandemic I decided to make make some changes to my
+          life, and started coding. I had always had a keen interest in
+          development and so I enrolled in a software engineering course setup
+          by Hyperion Development. I decided to branch more into the frontend
+          side and learnt frameworks and libraries such as React and Tailwind
+          CSS, bringing life into my APIs and NodeJS applications.
+        </p>
+        <p className="mb-4  text-sm leading-relaxed">
+          I am a creative person who enjoys creating music with my band. I live
+          in sunny Cape Town South Africa with my wife and 4 furry friends, and
+          I am partial to a round of golf!
+        </p>
+      </div>
+
+      <p className="mb-4 text-slate-500 text-sm  font-light leading-relaxed mt-6">
         Please feel free to reach out to me for any of your development needs
         at:{" "}
         <a href="mailto:devonmartindale@gmail.com?subject=Interested in Development">
@@ -41,9 +50,9 @@ export default function About() {
         <Link
           to="https://github.com/devonxfire"
           target="_blank"
-          className="flex items-center gap-2 hover:text-slate-800 bg-blue-950 p-2 rounded-lg w-[50%] text-white"
+          className="flex items-center gap-2 hover:opacity-90 bg-slate-700 p-2 rounded-lg w-[50%] text-white mx-auto sm:mx-0"
         >
-          <FaGithub className="w-8 h-8" />
+          <FaGithub className="w-8 h-8 " />
           <p>My GitHub Portfolio</p>
         </Link>
         <br />
