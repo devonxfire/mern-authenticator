@@ -1,34 +1,54 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 export default function About() {
   return (
-    <div className="px-6 sm:px-2 py-12 max-w-2xl mx-auto">
+    <div className="px-6 sm:px-2 py-12 max-w-2xl mx-auto ">
       <h1 className="text-3xl font-bold my-8 text-slate-700 text-center sm:text-start">
-        About
+        About Me...
       </h1>
-      <p className="mb-4 text-slate-500 text-sm sm:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-        voluptates perspiciatis itaque, eius assumenda velit a quidem voluptatum
-        temporibus non consectetur et consequuntur consequatur neque fugit,
-        mollitia amet tempora in vero? Deleniti voluptates autem quisquam sint
-        fugit placeat, libero, quibusdam repellendus perferendis vitae
-        exercitationem explicabo facilis veritatis saepe, tempora dolorem.
+      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
+        Hi there! My name is Devon Martindale, and I am a full stack developer
+        specialising in the MERN stack. I love the challenge of building
+        applications to satisfy both the client facing UI and functionality, as
+        well as the behind the scenes backend integration.
       </p>
-      <p className="mb-4 text-slate-500 text-sm sm:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-        voluptates perspiciatis itaque, eius assumenda velit a quidem voluptatum
-        temporibus non consectetur et consequuntur consequatur neque fugit,
-        mollitia amet tempora in vero? Deleniti voluptates autem quisquam sint
-        fugit placeat, libero, quibusdam repellendus perferendis vitae
-        exercitationem explicabo facilis veritatis saepe, tempora dolorem.
+      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
+        After the covid pandemic I decided to make make some changes to my life,
+        and started coding. I had always had a keen interest in development and
+        so I enrolled in a software engineering course setup by Hyperion
+        Development. I decided to branch more into the frontend side and learnt
+        frameworks and libraries such as React and Tailwind CSS, bringing life
+        into my APIs and NodeJS applications.
       </p>
-      <p className="mb-4 text-slate-500 text-sm sm:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-        voluptates perspiciatis itaque, eius assumenda velit a quidem voluptatum
-        temporibus non consectetur et consequuntur consequatur neque fugit,
-        mollitia amet tempora in vero? Deleniti voluptates autem quisquam sint
-        fugit placeat, libero, quibusdam repellendus perferendis vitae
-        exercitationem explicabo facilis veritatis saepe, tempora dolorem.
+      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
+        I am a creative person who enjoys creating music with my band. I live in
+        sunny Cape Town South Africa with my wife and 4 furry friends, and I am
+        partial to a round of golf!
+      </p>
+      <p className="mb-4 text-slate-500 text-sm leading-relaxed">
+        Please feel free to reach out to me for any of your development needs
+        at:{" "}
+        <a href="mailto:devonmartindale@gmail.com?subject=Interested in Development">
+          devonmartindale@gmail.com
+        </a>
+        <br />
+        <br />
+        Or checkout my GitHub profile below:
+        <br />
+        <br />
+        <Link
+          to="https://github.com/devonxfire"
+          target="_blank"
+          className="flex items-center gap-2 hover:text-slate-800 bg-blue-950 p-2 rounded-lg w-[50%] text-white"
+        >
+          <FaGithub className="w-8 h-8" />
+          <p>My GitHub Portfolio</p>
+        </Link>
+        <br />
+        Thank you! <br />
+        Devon
       </p>
     </div>
   );

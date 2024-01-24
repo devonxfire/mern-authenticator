@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaLock } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import padlock from "../assets/verified.png";
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
@@ -9,11 +10,15 @@ export default function Header() {
     <div className="bg-slate-200">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/" className="flex items-center gap-2 text-xl">
-          <FaLock className="text-2xl text-slate-700" />
-          <h1 className="font-bold">Authenticator App</h1>
+          {/* <FaLock className="text-2xl text-slate-700" /> */}
+          <img src={padlock} alt="logo" className="h-10 w-10 " />
+          <h1 className="text-3xl text-slate-500">
+            <span className="text-slate-700 font-light">Authenticator</span>
+            <span className="font-semibold">App</span>
+          </h1>
         </Link>
 
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 text-slate-600">
           <Link to="/">
             <li>Home</li>
           </Link>

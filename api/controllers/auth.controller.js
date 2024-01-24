@@ -35,6 +35,10 @@ export const signUp = async (req, res, next) => {
 export const signIn = async (req, res, next) => {
   const { email, password } = req.body;
 
+  if (!email || !password) {
+    return next(errorHandler(400, "Please enter all required fields"));
+  }
+
   try {
     const validUser = await User.findOne({ email });
 

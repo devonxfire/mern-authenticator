@@ -1,8 +1,7 @@
-import React from "react";
-
+import hero from "../assets/hero.jpg";
 export default function Home() {
   return (
-    <div className="px-6 sm:px-2 py-12 max-w-2xl mx-auto">
+    <div className="px-6 sm:px-2 py-12 max-w-4xl mx-auto ">
       <h1 className="text-lg sm:text-3xl font-bold my-8 text-slate-700 text-center sm:text-start">
         Welcome to my Authenication App!
       </h1>
@@ -30,6 +29,13 @@ export default function Home() {
         fugit placeat, libero, quibusdam repellendus perferendis vitae
         exercitationem explicabo facilis veritatis saepe, tempora dolorem.
       </p>
+      <div className="flex justify-center p-4">
+        <img
+          src={hero}
+          alt="hero-image"
+          className="rounded-lg brightness-50 w-[400px] "
+        />
+      </div>
     </div>
   );
 }

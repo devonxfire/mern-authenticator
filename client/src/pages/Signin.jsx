@@ -11,6 +11,8 @@ import OAuth from "../components/OAuth";
 export default function SignIn() {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
+  const [signInError, setSignInError] = useState(false);
+  const [errorDetails, setErrorDetails] = useState("");
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -21,6 +23,8 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setSignInError(false);
+
       dispatch(signInStart());
       const res = await fetch("/api/auth/sign-in", {
         method: "POST",
@@ -31,13 +35,16 @@ export default function SignIn() {
       });
       const data = await res.json();
       if (data.success === false) {
+        setSignInError(true);
+        setErrorDetails(data.message);
         dispatch(signInFailure(data));
+
         return;
       }
       dispatch(signInSuccess(data));
-
       navigate("/profile");
     } catch (error) {
+      setSignInError(true);
       dispatch(signInFailure(error));
     }
   };
@@ -74,9 +81,10 @@ export default function SignIn() {
           <span className="text-blue-500">Sign Up</span>
         </Link>
       </div>
-      <p className="text-red-700 mt-5">
-        {error ? error.message || "Something went wrong!" : ""}
-      </p>
+      {/* <p className="text-red-700 mt-5">
+        {error.success ? error.message || "Something went wrong!" : ""}
+      </p> */}
+      {error && <p className="text-red-700 mt-5">{errorDetails}</p>}
     </div>
   );
 }
