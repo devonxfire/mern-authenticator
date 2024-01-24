@@ -7,11 +7,11 @@ export default function Home() {
         Welcome to my Authenication App!
       </h1>
       <p className="mb-4 text-slate-500 text-sm sm:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-        voluptates perspiciatis itaque, eius assumenda velit a quidem voluptatum
-        temporibus non consectetur et consequuntur consequatur neque fugit,
-        mollitia amet tempora in vero? Deleniti voluptates autem quisquam sint
-        fugit placeat, libero, quibusdam repellendus perferendis vitae
+        Welcome! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Soluta voluptates perspiciatis itaque, eius assumenda velit a quidem
+        voluptatum temporibus non consectetur et consequuntur consequatur neque
+        fugit, mollitia amet tempora in vero? Deleniti voluptates autem quisquam
+        sint fugit placeat, libero, quibusdam repellendus perferendis vitae
         exercitationem explicabo facilis veritatis saepe, tempora dolorem.
       </p>
       <p className="mb-4 text-slate-500 text-sm sm:text-base">
