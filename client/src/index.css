@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h4 {
+  color: #396086;
+  font-weight: bolder;
+  margin-bottom: 0.25rem;
+}

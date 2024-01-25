@@ -20,7 +20,7 @@ export default function Header() {
           </h1>
         </Link>
 
-        <ul className="flex gap-4 text-slate-600 font-light text-xs">
+        <ul className="flex gap-4 text-slate-600 font-light text-xs sm:text-base">
           <Link to="/">
             <li>Home</li>
           </Link>
