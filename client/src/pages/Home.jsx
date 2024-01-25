@@ -33,59 +33,52 @@ export default function Home() {
       </p>
       <h4>1. Frontend</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
-        {" "}
-        Setup: We commence by installing React.js and seamlessly integrating
-        Tailwind CSS. Delve into the power of React Router Dom's newest release
-        to establish a robust routing system and create authentication pages
-        that lay the groundwork for our feature-rich application.
-      </p>{" "}
-      <h4>2. Authentication Mastery</h4>
+        Setup: Installation of React.js was done using the Vite toolkit. Next up
+        was installing and integrating the Tailwind CSS library. The React
+        Router Dom package was installed to establish a robust routing system
+        and create authentication pages that lay the groundwork for the
+        application.
+      </p>
+      <h4>2. Authentication</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
         Our application supports email and password authentication via JSON Web
-        Tokens, delivering secure user experiences. Additionally, we'll explore
-        the integration of Google OAuth for seamless sign-ins.
+        Tokens, delivering secure user experiences. Additionally, the
+        integration of Google OAuth was integrated in order to let users sign up
+        or sign in via their Google account. This process utilised Firebase
+        authentication.
       </p>
       <h4>3. Efficient State Management with Redux Toolkit</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
-        Discover the convenience of Redux Toolkit for streamlined state
-        management, enabling you to effortlessly maintain global states.
+        Redux Toolkit was used for streamlined state management, enabling the
+        app to effortlessly maintain global states.
       </p>
-      <h4>4. Ironclad Profile Pages</h4>
+      <h4>4. Profile Pages</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
         Certain pages, such as the profile page, receive dual layers of
         protection both on the client and backend sides ensuring the utmost
-        security for your application.
+        security of the application.
       </p>
       <h4>5. Dynamic Profile Management</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
-        {" "}
-        Unleash the power to update user profiles, encompassing usernames,
-        emails, and passwords. We'll even delve into image profile updates
-        utilising Firebase Storage.
+        Authenticated users can update their profiles, encompassing usernames,
+        emails, and passwords. Firebase storage was also implemented in order to
+        allow image profile updates.
       </p>
       <h4>6.Account Deletion</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
-        {" "}
-        Learn the art of safely deleting user accounts, complete with checks for
-        JSON Web Token cookies.
+        Users can safely delete their accounts, complete with checks for JSON
+        Web Token cookies.
       </p>
-      <h4>7. Masterful CRUD Operations</h4>
+      <h4>7. CRUD Operations</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
-        {" "}
-        Dive into the intricacies of Create, Read, Update, and Delete (CRUD)
-        operations using MongoDB, enabling you to interact effectively with your
-        database.
+        API operations such as Create, Read, Update, and Delete (CRUD)
+        operations using MongoDB, enabling a seamless communication with the
+        MongoDB database.
       </p>
       <h4>8. Deployment and Sharing</h4>
       <p className="mb-4  text-xs sm:text-sm leading-relaxed">
-        {" "}
-        Finally, we'll harness Render to deploy your full-stack authentication
-        app, all without cost. Share it with others or add it to your portfolio
-        to showcase your newly acquired skills. The prerequisites for this
-        course are simple: a basic understanding of JavaScript and React. If
-        your excitement matches ours in building this dynamic application, let's
-        embark on your journey toward becoming a full-stack authentication
-        expert!
+        Render was used to deploy the full-stack authentication app. Thank you
+        for taking the time to review my app!
       </p>
       <div className="flex justify-between max-w-[60%] sm:text-4xl text-2xl mx-auto p-6 mt-12  rounded-lg ">
         <SiMongodb className="text-green-500" />
